@@ -3,8 +3,6 @@ class Circle extends Figure{
     constructor(posX, posY, radius) {
         super(posX, posY, 2 * radius, 2 * radius);
         this.radius = radius;
-        this.posX = posX;
-        this.posY = posY;
     }
 
     getArea() {
