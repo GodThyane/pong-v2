@@ -35,8 +35,6 @@ class PongGame {
         this.paddle_one.move();
         this.paddle_two.move();
         this.ball.move();
-        console.log(this.paddle_one.posY);
-
     }
 
     isGameOver(){

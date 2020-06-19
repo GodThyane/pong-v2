@@ -7,10 +7,10 @@ class MouseControl extends Control{
 
     move(event) {
         if(event.clientY < this.animatedFigure.figure.posY)
-            this.figure.direction = 'UP';
+            this.animatedFigure.direction = 'UP';
 
         if(event.clientY > this.animatedFigure.figure.posY + this.animatedFigure.height)
-            this.figure.direction = 'DOWN';
+            this.animatedFigure.direction = 'DOWN';
     }
 
 }
