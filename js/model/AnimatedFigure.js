@@ -1,12 +1,13 @@
 class AnimatedFigure {
 
-    constructor(figure, direction, step) {
+    constructor(figure, direction, stepX, stepY) {
         if (this.constructor === AnimatedFigure) {
             throw new Error("Abstract classes can't be instantiated.");
         }
         this.figure = figure;
         this.direction = direction;
-        this.step = step;
+        this.stepX = stepX;
+        this.stepY = stepY;
     }
 
     move() {
