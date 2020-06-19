@@ -5,7 +5,17 @@ class Paddle extends AnimatedFigure{
     }
 
     move() {
-        super.move();
+        switch(this.direction)  {
+            case 'UP':
+                this.posY -= this.step;
+                break;
+            case 'DOWN':
+                this.posY += this.step;
+                break;
+            default:
+                break;
+        }
+        this.direction = ' '
     }
 
 }
