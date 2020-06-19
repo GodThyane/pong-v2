@@ -5,9 +5,9 @@ class BallView extends CircleView {
     }
 
     render() {
-        let context = canvas.getContext('2d');
+        let context = this.canvas.getContext('2d');
         context.beginPath();
-        context.rect(this.figure.posX, this.figure.posY, this.figure.width, this.figure.height);
+        context.arc(this.figure.posX, this.figure.posY, this.figure.radius, 0, Math.PI * 2);
         context.fillStyle = this.fillColor;
         context.fill();
         context.closePath();
