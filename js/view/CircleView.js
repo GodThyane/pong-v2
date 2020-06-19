@@ -5,6 +5,10 @@ class CircleView extends FigureView{
     }
 
     render(){
+        let context = canvas.getContext('2d');
+        context.beginPath();
+        context.rect(this.figure.posX, this.figure.posY, this.figure.width, this.figure.height);
+        context.closePath();
         
     }
 }

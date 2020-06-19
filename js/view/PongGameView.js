@@ -9,6 +9,10 @@ class PongGameView{
     }
 
     render(){
-
+        let context = this.canvas.getContext('2d');
+        context.clearRect(this.pongGame.game_area.posX, this.pongGame.game_area.posY, this.pongGame.width, this.pongGame.height);
+        this.paddleOneView.render();
+        this.paddleTwoView.render();
+        this.ballView.render();
     }
 }
