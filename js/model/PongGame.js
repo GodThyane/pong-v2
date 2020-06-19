@@ -3,56 +3,50 @@ class PongGame {
     MAX_WIN_SCORE = 21;
     MIN_WIN_SCORE = 3;
 
-        constructor(height, width, winScore) {
-
-        this.height = height;
-        this.width = width;
-
-        let paddleHeight = this.height * 0.25;
-        let paddleY = this.height / 2 - paddleHeight;
-
+    constructor(height, width, winScore) {
+        this.gameArea = new Rectangle(0, 0, height, width);
         this.winScore = winScore;
-        this.ball = new Ball(50,50,10 , Math.random()*360, 1);
-        this.paddle_one = new Paddle(10,paddleY, paddleHeight,15, 5, ' ');
-        this.paddle_two = new Paddle(this.width - 25,paddleY, paddleHeight,15, 5, ' ');
-        this.game_area = new Rectangle(0,0,height,width);
-        this.player_one = new Player("Player 1", 0);
-        this.player_two = new Player("Player 2", 0);
+        this.initializeGame()
     }
 
-    update(){
+    update() {
         this.checkCollisions();
         this.moveFigures();
         this.updateScores();
     }
 
-    checkCollisions(){
+    checkCollisions() {
 
 
     }
 
-    moveFigures(){
-        this.paddle_one.move();
-        this.paddle_two.move();
+    moveFigures() {
+        this.paddleOne.move();
+        this.paddleTwo.move();
         this.ball.move();
     }
 
-    isGameOver(){
+    isGameOver() {
 
 
     }
 
-    initializeGame(){
+    initializeGame() {
+        let paddleHeight = this.gameArea.height * 0.25;
+        let paddleY = this.gameArea.height / 2 - paddleHeight;
+        this.ball = new Ball(50, 50, 10, Math.random() * 360, 1);
+        this.paddleOne = new Paddle(this.gameArea.posX + 10, paddleY, paddleHeight, 15, ' ', 5);
+        this.paddleTwo = new Paddle(this.gameArea.width - 25, paddleY, paddleHeight, 15, ' ', 5);
+        this.playerOne = new Player("Player 1", 0);
+        this.playerTwo = new Player("Player 2", 0);
+    }
+
+    initializeRound() {
 
 
     }
 
-    initializeRound(){
-
-
-    }
-
-    updateScores(){
+    updateScores() {
 
 
     }

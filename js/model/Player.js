@@ -1,13 +1,11 @@
-
-
 class Player {
 
-    constructor(id,score) {
+    constructor(id, score) {
         this.id = id;
         this.score = score;
     }
 
-    addScore(score){
+    addScore(score) {
         this.score += score;
     }
 

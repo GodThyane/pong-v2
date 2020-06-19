@@ -9,5 +9,4 @@ class KeyboardControl extends Control{
     updateFigure(event) {
         this.animatedFigure.direction = (event.keyCode === 38) ? 'UP': 'DOWN';
     }
-
 }

@@ -1,4 +1,4 @@
-class Circle extends Figure{
+class Circle extends Figure {
 
     constructor(posX, posY, radius) {
         super(posX, posY, 2 * radius, 2 * radius);

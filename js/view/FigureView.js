@@ -1,6 +1,6 @@
-class FigureView{
+class FigureView {
 
-    constructor(figure,fillColor,outlineColor,canvas){
+    constructor(figure, fillColor, outlineColor, canvas) {
         if (this.constructor === FigureView) {
             throw new Error("Abstract classes can't be instantiated.");
         }
@@ -10,7 +10,7 @@ class FigureView{
         this.figure = figure;
     }
 
-    render(){
+    render() {
         throw new Error("Method 'render()' must be implemented.");
     }
 }

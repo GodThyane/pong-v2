@@ -15,15 +15,15 @@ class Figure {
         this.width = width;
     }
 
-    getArea(){
+    getArea() {
 
     }
 
-    isInside(posX, posY){
+    isInside(posX, posY) {
 
     }
 
-    contains(figure){
+    contains(figure) {
 
     }
 

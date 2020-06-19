@@ -10,9 +10,7 @@ class AnimatedFigure {
     }
 
     move() {
-
-
-
+        throw new Error("Method 'move()' must be implemented.");
     }
 
 }

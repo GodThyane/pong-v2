@@ -1,12 +1,14 @@
 class Control {
 
-    constructor(document,animatedFigure) {
+    constructor(document, animatedFigure) {
+        if (this.constructor === Control) {
+            throw new Error("Abstract classes can't be instantiated.");
+        }
         this.document = document;
         this.animatedFigure = animatedFigure;
     }
 
-    updateFigure(){
-
+    updateFigure() {
+        throw new Error("Method 'move()' must be implemented.");
     }
-
 }
