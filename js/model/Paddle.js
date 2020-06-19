@@ -8,9 +8,11 @@ class Paddle extends AnimatedFigure{
         switch(this.direction)  {
             case 'UP':
                 this.posY -= this.step;
+                console.log(this.posY)
                 break;
             case 'DOWN':
                 this.posY += this.step;
+                console.log(this.posY)
                 break;
             default:
                 break;
