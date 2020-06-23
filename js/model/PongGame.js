@@ -13,6 +13,8 @@ class PongGame {
         let paddleY = this.gameArea.height / 2 - paddleHeight;
         this.paddleOne = new Paddle(this.gameArea.posX + 10, paddleY, paddleHeight, 15, ' ', 10);
         this.paddleTwo = new Paddle(this.gameArea.width - 25, paddleY, paddleHeight, 15, ' ', 10);
+        this.playerOne = new Player("Player 1", 0);
+        this.playerTwo = new Player("Player 2", 0);
         this.initializeGame();
     }
 
@@ -55,8 +57,8 @@ class PongGame {
     }
 
     initializeGame() {
-        this.playerOne = new Player("Player 1", 0);
-        this.playerTwo = new Player("Player 2", 0);
+        this.playerOne.score = 0;
+        this.playerTwo.score = 0;
         this.initializeRound();
     }
 

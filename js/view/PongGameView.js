@@ -6,7 +6,7 @@ class PongGameView {
         this.ballView = new BallView(this.pongGame.ball, 'blue', 'black', this.canvas);
         this.paddleOneView = new PaddleView(this.pongGame.paddleOne, 'red', 'black', this.canvas);
         this.paddleTwoView = new PaddleView(this.pongGame.paddleTwo, 'red', 'black', this.canvas);
-        this.scoreView = new ScoreView('red',this.canvas,'30px Comic Sans MS',pongGame);
+        this.scoreView = new ScoreView('red',this.canvas,'30px Comic Sans MS',this.pongGame.playerOne, this.pongGame.playerTwo);
     }
 
     render() {
